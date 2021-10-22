@@ -1,11 +1,11 @@
 #inside of email
 import urllib.request
 import json
-
+from variables import *
 
 city = "Poltava"
 temperature = 10
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=43aa59b8ab870d55594bf2dc54e2a617"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}"
 
 
 #Function to take out weather from json file

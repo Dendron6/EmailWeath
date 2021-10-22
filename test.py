@@ -1,17 +1,12 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import pandas as pd
 from paramWeather import *
+from variables import *
 
 def sendEmail():
-    # section of retrieving pass and login
-    file = pd.read_excel('notification.xlsx')
-    email = file.username[0]
-    password = file.password[0]
-
     # emailpart
-    send_to_email = "deniskhomenko@yahoo.com"
+    send_to_email = sendto
     subject = "Weather update"
     message = condition()
 
